@@ -8,7 +8,7 @@ function App(){
           <nav>
             <ul>
               <li>
-                <a href="profile">Profile page</a>
+                <a href="/profile">Profile page</a>
               </li>
             </ul>
           </nav>

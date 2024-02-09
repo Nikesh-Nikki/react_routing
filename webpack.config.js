@@ -4,9 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 entry: './src/index.js',
 output: {
-  path: path.join(__dirname, '/dist/'),
-  filename: '[name].js'
+  path: path.resolve(__dirname, 'dist'),
+  filename: '[name].js',
+  publicPath : '/'
 },
+target : 'web',
 mode: 'development',
 devtool: 'inline-source-map',
 devServer: {
@@ -35,7 +37,9 @@ plugins: [
 devServer: {
   port: 3000,
   open: true,
-  hot: true
+  hot: true,
+//   watchContentBase: true
+historyApiFallback : true
 },
 optimization: {
     runtimeChunk: 'single',
